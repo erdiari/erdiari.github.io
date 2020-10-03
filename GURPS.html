@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-10-03 Cmt 17:24 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgaa00bd1">1. Olay</a>
+<ul>
+<li><a href="#orgce31ee1">1.1. Genel</a></li>
+<li><a href="#org23c638e">1.2. DM notes:</a></li>
+<li><a href="#org7e4394d">1.3. Önemli Olaylar</a>
+<ul>
+<li><a href="#org1f6954f">1.3.1. Amerikalıların cisime yaklaşma çabaları</a></li>
+</ul>
+</li>
+<li><a href="#orgd9c1e39">1.4. Sessionda olanlar</a>
+<ul>
+<li><a href="#org0bf7dc4">1.4.1. Session 1</a></li>
+<li><a href="#orgdaef8b7">1.4.2. Session 2</a></li>
+<li><a href="#org95821db">1.4.3. Session 3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1daeddc">2. Kişiler/organizasyonlar</a>
+<ul>
+<li><a href="#org82bd947">2.1. Dünya-içi</a>
+<ul>
+<li><a href="#org0ddb299">2.1.1. Amerikan Ordusu</a></li>
+<li><a href="#org2b70076">2.1.2. Rus ordusu</a></li>
+<li><a href="#org4045a3a">2.1.3. Rentex Technologies</a></li>
+<li><a href="#orgdc7f4b7">2.1.4. Loktung Technologies</a></li>
+<li><a href="#orgf782695">2.1.5. Unidex Corporation</a></li>
+<li><a href="#org816a916">2.1.6. Hermetic Order</a></li>
+<li><a href="#orgaab019b">2.1.7. Werewolf Tribe</a></li>
+<li><a href="#org7e187d0">2.1.8. Vatican Special Units</a></li>
+<li><a href="#orgc4b1740">2.1.9. Gün doğumu (shuruq alshams)</a></li>
+<li><a href="#org256d573">2.1.10. Koruyucular (almudakhirin)</a></li>
+</ul>
+</li>
+<li><a href="#org1fdeca6">2.2. Dünya-Dışı</a>
+<ul>
+<li><a href="#orgbcf8909">2.2.1. Neo-Nazis</a></li>
+<li><a href="#org0984db8">2.2.2. Void-eaters</a></li>
+<li><a href="#orgf28dc26">2.2.3. Floogons</a></li>
+<li><a href="#org658ebf7">2.2.4. Trog'dir-kel</a></li>
+<li><a href="#orga1a14c4">2.2.5. Unidentifiables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgc7fffad">3. Mekanlar</a>
+<ul>
+<li><a href="#org07041d7">3.1. Echoes (Yankı/akis)</a></li>
+</ul>
+</li>
+<li><a href="#orgc7d26f5">4. Karakter Backgroundları</a>
+<ul>
+<li><a href="#org3277419">4.1. Onur Can</a></li>
+<li><a href="#org48ba747">4.2. Görkem</a></li>
+<li><a href="#org5f2523a">4.3. Yusuf</a></li>
+<li><a href="#org7e1afbd">4.4. Batuhan Mutlay</a></li>
+</ul>
+</li>
+<li><a href="#orgfd886ee">5. Random Encounter</a>
+<ul>
+<li><a href="#org4e9ad7e">5.1. Some Encounter Ideas</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaa00bd1" class="outline-2">
+<h2 id="orgaa00bd1"><span class="section-number-2">1</span> Olay</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgce31ee1" class="outline-3">
+<h3 id="orgce31ee1"><span class="section-number-3">1.1</span> Genel</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Garip siyah ve garip özelliklere sahip bir cisim yer yüzüne çıkarıldı. Bu simsiyah ve mat cisim etrafındaki alanı büküyor ve başka evrenileri buraya bağlıyor.
+Karakterlerimiz de bu cisim tarafından ya hayatları değiştiriliyor ya da buraya çağrılıyor. Bu cisime ilgi duyan kurumlar var ve gerçeklikteki eksilkiği gören varlıklar var.
+Bunların varlığı ve zayıflayan gerçeklik {{BOLGE}} bölgesini tehlikeli bir yer haline getiriyor.
+</p>
+</div>
+</div>
+<div id="outline-container-org23c638e" class="outline-3">
+<h3 id="org23c638e"><span class="section-number-3">1.2</span> DM notes:</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Bu cisim bizden farklı anlatılamaz bir varlığın evrenimize açtığı bir delik. Cisimlerle etkileşebiliyor çünkü çok güçlü bir manyetik alana sahip. Bu deliğin varlığı etraftaki gerçekleği zayıflatıyor ve başka boyutlardan varlıkların gelmesini kolaylaştırıyor. Bu varlığın amacı tam olarak bilinmiyor ama gerçekleği bu şekilde büktüğünden tekinsiz bir şey olduğu belli.
+</p>
+</div>
+</div>
+<div id="outline-container-org7e4394d" class="outline-3">
+<h3 id="org7e4394d"><span class="section-number-3">1.3</span> Önemli Olaylar</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org1f6954f" class="outline-4">
+<h4 id="org1f6954f"><span class="section-number-4">1.3.1</span> Amerikalıların cisime yaklaşma çabaları</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+Amerikalılar cisime ele geçirmek için yolladıkları özel harekat birlikleriyle bir başarıya ulaşamayınca bölgeyi işgal için bir yol ararlar.
+Bu sırada ülkede huzurunu bozmak için kullandıkları örgütün adıyla kendi kulelerini bombalatırlar.
+Bu sayede ülkeye tam güç uygulama için politik güç kazanırlar.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd9c1e39" class="outline-3">
+<h3 id="orgd9c1e39"><span class="section-number-3">1.4</span> Sessionda olanlar</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-org0bf7dc4" class="outline-4">
+<h4 id="org0bf7dc4"><span class="section-number-4">1.4.1</span> Session 1</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+Partimiz birleşip türkiye sınırlarından çıktılar. En sonunda Irak içerisinde dağlık bir bölge olan <b>*</b> giderken kendilerini bir akisin içerisinde bulurlar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdaef8b7" class="outline-4">
+<h4 id="orgdaef8b7"><span class="section-number-4">1.4.2</span> Session 2</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<p>
+Partimiz en son bir akisin içerisine düşmüşlerdir.
+Akisin içerisini biraz gezdiklerinde yakın çevrede hiçbir canlının bulunmadığını göreceklerdir.
+Ta ki void eaterlardan oluşan bir toplulukla karşılaşana kadar. 
+Void eaterlar çıkışı yiyerek genişletmeye çalışmaktadırlar.
+Çıkmayı başardıklarında çıkışın yakınında silahla bekleyen bir grup yerliyle karşılaşırlar.
+Bu yerliler shuruq alshams militanları.
+Tutup üslerinden birine götürüyorlar.
+Orada Batuhanın karakterinin babası ile tanışıyorlar.
+O da onlara durumu bildiği kadar anlatıyor.
+</p>
+
+<p>
+Anlatacakları
+</p>
+<ul class="org-ul">
+<li>Küre iyi güzel bayağıdır buralarda.</li>
+<li>100 senedir suskundu küre aktifleşti yine.</li>
+<li>Amarığalılar falan da geldi kesin o götler kötü bir şey yaptı.</li>
+<li>Yaratıklar çok gelmezdi böcekler falan akın akın gelmeye başladı.</li>
+<li>Harita üzerinde bölgenin hareket ettiğini falan anlatıyor.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org95821db" class="outline-4">
+<h4 id="org95821db"><span class="section-number-4">1.4.3</span> Session 3</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<p>
+Parti geldikten sonraki gün arasın babası getirdikleri void-eater dişini kullanabileceğini söyler.
+Partiden dişleri ister.
+Dişleri aldıktan sonra başka bir üsse gider.
+Yolda almudakhirim milisleri tarafından saldırıya uğrar.
+Diğer üsse vardığında bu dişleri varolan ilk akislerden birini &#x2013; eski üslerinin kapısını açmak için kullanacaktır.
+Bu geldikleri üs eski üssün kilitlenmiş kapısı üzerine kurulmuş.
+Açtığında kapının içerisinden uzay boşluğu ya da bir omurgasız bir deniz canlısının uzvu olan birr şey tarafından
+saldırıya uğrarlar. 
+Ethem'in son anda istemsizce kullandığı kalkan sayesinde hayatta kalırlar.
+uzuv sonrasında kalkan dışındaki her yeri kaplar ve tamamen bir karanlık oluşur.
+Şimdi ki uzay zamandan kopmuşlardır.
+Birkaç zar atımı vb.
+Tamamen tanımadıkları bir yere varmışlardır.
+Etraf normal ormanlık alandır ama arada bıçakla kesilmiş gibi yabancı bir çevre kendini gösterir.
+&#x2013; Eşyalara damage zarı at. Ne kadar eşyaları kaybolmuş.
+</p>
+
+<p>
+&#x2013; Session End
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1daeddc" class="outline-2">
+<h2 id="org1daeddc"><span class="section-number-2">2</span> Kişiler/organizasyonlar</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org82bd947" class="outline-3">
+<h3 id="org82bd947"><span class="section-number-3">2.1</span> Dünya-içi</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org0ddb299" class="outline-4">
+<h4 id="org0ddb299"><span class="section-number-4">2.1.1</span> Amerikan Ordusu</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+Başında: Colonel Michael Oak
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b70076" class="outline-4">
+<h4 id="org2b70076"><span class="section-number-4">2.1.2</span> Rus ordusu</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+Başında: Polkovnik (Albay) Tolkachyov Makarovich
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4045a3a" class="outline-4">
+<h4 id="org4045a3a"><span class="section-number-4">2.1.3</span> Rentex Technologies</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<p>
+WOD PENTEX
+Başında:
+Çalıştığı alanlar:
+Medikal, Farmakoloji, Genetik
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdc7f4b7" class="outline-4">
+<h4 id="orgdc7f4b7"><span class="section-number-4">2.1.4</span> Loktung Technologies</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<p>
+Başında:
+Çalıştığı alanlar:
+Robotik, Savunma sanayi, TANK
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf782695" class="outline-4">
+<h4 id="orgf782695"><span class="section-number-4">2.1.5</span> Unidex Corporation</h4>
+<div class="outline-text-4" id="text-2-1-5">
+<p>
+Başında:
+Çalıştığı alanlar:
+Bilgisayar Sistemleri, Emlak, Borsa
+</p>
+</div>
+</div>
+
+<div id="outline-container-org816a916" class="outline-4">
+<h4 id="org816a916"><span class="section-number-4">2.1.6</span> Hermetic Order</h4>
+<div class="outline-text-4" id="text-2-1-6">
+<p>
+Başında:
+Eski Büyücüler, evet.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaab019b" class="outline-4">
+<h4 id="orgaab019b"><span class="section-number-4">2.1.7</span> Werewolf Tribe</h4>
+<div class="outline-text-4" id="text-2-1-7">
+<p>
+Başında::
+KURTADAM bu kadar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e187d0" class="outline-4">
+<h4 id="org7e187d0"><span class="section-number-4">2.1.8</span> Vatican Special Units</h4>
+<div class="outline-text-4" id="text-2-1-8">
+<p>
+Special units of vatican(duh!).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4b1740" class="outline-4">
+<h4 id="orgc4b1740"><span class="section-number-4">2.1.9</span> Gün doğumu (shuruq alshams)</h4>
+<div class="outline-text-4" id="text-2-1-9">
+<p>
+Tarikat, eski. Cisim daha küçücükken farkediyorlar koruyorlar.
+Biraz evillar.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org256d573" class="outline-4">
+<h4 id="org256d573"><span class="section-number-4">2.1.10</span> Koruyucular (almudakhirin)</h4>
+<div class="outline-text-4" id="text-2-1-10">
+<p>
+Tarikat, biraz daha yeni. Gün doğumunun aq felsefesini benimsiyorlar
+Biraz iyiler.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1fdeca6" class="outline-3">
+<h3 id="org1fdeca6"><span class="section-number-3">2.2</span> Dünya-Dışı</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgbcf8909" class="outline-4">
+<h4 id="orgbcf8909"><span class="section-number-4">2.2.1</span> Neo-Nazis</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+WW2 sonrasında kaybeden bazı occultist nazi subayları &#x2013;kürenin evrende yarattığı gerçekliğin kararsızlaşması durumuyla, başka bir boyuta kaçmayı başarırlar. Kürenin güçlenmesi ile geri dönerler.
+</p>
+</div>
+</div>
+<div id="outline-container-org0984db8" class="outline-4">
+<h4 id="org0984db8"><span class="section-number-4">2.2.2</span> Void-eaters</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+Sentient bugs with purple carapace.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org2eba07f"></a>Background<br />
+<div class="outline-text-5" id="text-2-2-2-1">
+<p>
+Bilgi yok.
+</p>
+</div>
+</li>
+<li><a id="org35dceec"></a>Safhaları<br />
+<div class="outline-text-5" id="text-2-2-2-2">
+<p>
+Boyutlarına göre gelişmişlik safhaları vardır.
+</p>
+<ul class="org-ul">
+<li>Worker
+En küçük void-eater türüdür.
+Genellikle daha büyük bir void eater tarafından kontrol edilmektedir.
+Genellikle irice bir köpek büyüklüğündedirler.</li>
+<li>Chieftain</li>
+</ul>
+<p>
+Altında yaklaşık bir düzine worker olan at büyüklüklüğündeki void eaterdır.     
+</p>
+<ul class="org-ul">
+<li>Centurion
+Altında yaklaşık bir düzine Chieftain olan 3-4 m büyüklüğündeki böceklerdir.</li>
+<li>Lord</li>
+</ul>
+<p>
+Altinda yaklaşık bir düzine Centurion olan 10 m büyüklüğündeki böceklerdir.     
+</p>
+<ul class="org-ul">
+<li>King</li>
+<li>Emperor</li>
+<li>Hive Queen
+Üremeleri:
+Hive queen bir günde kolonisini yeniden kuracak kadar yumurtlar. Yeteri kadar yaşayan ve diğer türdeşlerinin kontrolüne geçmeyi başaran bir üst seviyeye çıkar.
+Hive queen'in nereden geldiği bilinmemektedir. Birden fazla hive queen olup olmadığı da bilinmemektedir.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgf28dc26" class="outline-4">
+<h4 id="orgf28dc26"><span class="section-number-4">2.2.3</span> Floogons</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+Grey skinned humanoid with pill shaped head.
+</p>
+</div>
+</div>
+<div id="outline-container-org658ebf7" class="outline-4">
+<h4 id="org658ebf7"><span class="section-number-4">2.2.4</span> Trog'dir-kel</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<p>
+Demon like deep-space creatures with only destruction on their minds.
+Doom Demons
+</p>
+</div>
+</div>
+<div id="outline-container-orga1a14c4" class="outline-4">
+<h4 id="orga1a14c4"><span class="section-number-4">2.2.5</span> Unidentifiables</h4>
+<div class="outline-text-4" id="text-2-2-5">
+<p>
+Unidentified monsters with various origins.
+They have unexplainable powers.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc7fffad" class="outline-2">
+<h2 id="orgc7fffad"><span class="section-number-2">3</span> Mekanlar</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org07041d7" class="outline-3">
+<h3 id="org07041d7"><span class="section-number-3">3.1</span> Echoes (Yankı/akis)</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Yankılar boyutumuzun bir kısmının belirli sebeplerle kopyalanması fenomonudur.
+Kişiler yankılara düşebilirler.
+Yankılar bizim gerçekliğimiz ve başka gerçeklikler arasında bir yerde olduğu için bu dünyadan olmayan varlıkları içerebilirler.
+Yankılardan çıkabilmek için yankının gerçekleğimize değdiği yerin bulunması gerekir.
+Buralar fazla dünya dışı varlığın bulunduğu yerleri bulma, gerçekliğin en zayıf olduğu yeri bulma ya da özelleştirilmiş aletlerin kullanılmasıyla bulunabilir.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc7d26f5" class="outline-2">
+<h2 id="orgc7d26f5"><span class="section-number-2">4</span> Karakter Backgroundları</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org3277419" class="outline-3">
+<h3 id="org3277419"><span class="section-number-3">4.1</span> Onur Can</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+{onur} '83 kars doğumlu bir adam. Bir köyde yetişiyor ve sonra çalışmak için Almanya'ya gidiyor. Orada amele olarak senelerce çalışıyor, para biriktiriyor. Sonra bir ara telefonunu bir kadın arıyor.
+Kadın türk olduğunu ve karsta yaşadığını söyler. Hoş sohbet eylerler. Kadın buna almanyaya gelmek istediğini ama para bulamadığını söyler. Adam buna senelerce para gönderir. Kadın gelmeyince sorar neden gelemiyorsun diye.
+Kadın ailesi yüzünden gelemediğini söyler. Bu da atlar kars'a gider. Kadını araştırır, bulur. Kadını başka erkek(ler) ile görünce basına gelenleri anlar. Sarı mercedesinin gazına sonuna kadar basar.
+O gün yağmur yağmaktadır. Kendini aşkın getirdiği kalp kırıklığı ve aldatılmışlığın üznüyle (ve biraz da senelerdir eline kadın eli değmemesinin şeyiyle) bir uçurumdan aşağıya uçar.
+</p>
+
+<p>
+Dm notes:
+Uçurdan aşağıya düşer iken o sırada görünmez olan bir floogon dronuna çarpar. Floogon dronu o sırada  araştırma için bölgede bulduğu anlaşılamaz bir yerden gelmiş ve kaotik enerji taşıyan
+kristali floogon üslerinden birine taşımaktadır. Bu enerji sonra karakterle bütünleşmektedir Bu enerji kişinin azgınlık seviyesine tepki göstermektedir.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org48ba747" class="outline-3">
+<h3 id="org48ba747"><span class="section-number-3">4.2</span> Görkem</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Hitler'in asker çocuk propagandalarının başarılı bir örneği olan {görkem}, ülkesi ve führer'i için her şeyi yapmaya hazır gözükara bir alman subayıdır.
+Tıp okumaya başlamasına rağmen eğitimi 2. dünya savaşı nedeniyle yarıda kesilir. Cepheye gider. Cephede yaralanir ve geri dönmek zorunda kalır.
+Hastanede iyileşirken {görkem} yanına bir adam gelir ve birlikten bahseder. Adam {görkem}'in yarım kalmış tıp kariyerini bilmektedir ve bunun tamamlayabileceği hem de
+tarihe adını yazdırabileceğini söyler. Karakter nazi occult bir topluluğa dahil olur. Burada deneylerde gösterdiği başarıyla führer tarafından sonsuz hayatın sırrına muhafak olma ve güçlülerin yanında bulunabilme
+onuruna erişir (Vampir olur yane) ardından türkiye'deki ajanların başına atanır. Almanlar savaşı kaybedince &#x2013;yeniden alman imparatorluğunun engellenemez yükselişi başladığında uyanmak üzere, derin bir uykuya yatar.
+</p>
+</div>
+</div>
+<div id="outline-container-org5f2523a" class="outline-3">
+<h3 id="org5f2523a"><span class="section-number-3">4.3</span> Yusuf</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+{Yusuf} Neo-amerika derin atlayıcıları arasında parmakla sayılabilecek seçkinlerden biriydi. Senelerdir derin atlamalar yapıyordu ve işinde çok iyiydi.
+Mars kolonilerinin birinde yaşayan ünlü bir psikiyatri profösörünün yeni yeni geliştirmekte olduğu bir teknik olan derin-psikoz bilinç-altı-geliştirme tekniğinin
+başarısını iş arkadaşlarından duyunca, insan deneylerinden biri olmayı kabul etti. Bilincini karmaşık psimedikal ve psikaytik yöntemlerle sildirerek, bilinç altının
+, içgüdüsünün, gelişmesini sağladı.
+Bunun yanı sıra derin-atlamada gösterdiği başarıdan dolayı Neo-Amerikan devleti tarafından faz-değiştirici uzay aracının prototiplerinden birinin pilotu olması için seçildi.
+</p>
+
+<p>
+Faz-değiştici uzay aracının test sürüşü coğunlukla iyi geçmekteydi. Ta ki faz-değiştirici uzay aracı bir nedeni bilinmeyen bir uzay-zaman türbülansına kapılana kadar.
+türbülansa takılan araç uzay-zaman üzerinde takip edilemeyen bir uçuş gerçekleştirdi. Gemi türbülanstan çıktığında karakter bilincini ve hafızasının bir kısmını kaybetmişti.
+Gemi kontrolsüzce ilkel bir toplumun yaşadığı bir gezegene çarptı. Bilinci bir süre kapalı kalır.
+</p>
+</div>
+</div>
+<div id="outline-container-org7e1afbd" class="outline-3">
+<h3 id="org7e1afbd"><span class="section-number-3">4.4</span> Batuhan Mutlay</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+{Batuhan} eskişehir doğumlu bir gençtir. Bütün hayatını normal bir türk gencinden çok farklı değildir.
+Kendisi hakkındaki farklı tek şey ailesinin bir jenerasyon öncesinden Doğu'dan bir yerden buraya göçmüş olmasıdır.
+Babası Anadolu Üniversite'sinde Arap Tarihi hakkında araştırmalar yapmaktadır ve ders vermektedir. Annesi bir ev hanımıdır.
+Ancak ailenin iç hayatında alışılmadık şeyler görülmektedir. Babası karakterimize kendilerinin çok eski, köklü bir geleneğin mensubu olduklarını ve bu geleneğin zamanı geldiğinde ona devredileceğini söyler.
+Hayatı normal seyrinde devam ederken bir gece saatlerinde babası karakterimize giderek evden birkaç haftalığına geldikleri yere gideceğini ve bu gittiği süre boyunca karakterimizin ailesine bakması gerektiğini söyler.
+Giderken ayrıca yaşının geldiğini söyler gizli tarihini ona anlatması gerektiğini söyler. Bunu geldiğinde yapacağını söyler. Ancak şimdilik kendisine vereceği kitapdan bilgi açlığını gdermesini söyler.
+</p>
+
+<p>
+Birkaç hafta geçer. Karakterimiz meraklanmaktadır ancak babası geri dönmememiştir ve babasının peşine düşer.
+</p>
+
+<p>
+Dm notları: Babası almudakhirin örgütüne üyedir ve üst kademe yöneticilerindendir. Deliğin aktifleşmesi üzerine geri çağrılır.
+Kitapda almudakhirin tarihi yazmaktadır. Ve bir kaç adet seromoni ve büyüyü de içermektedir.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfd886ee" class="outline-2">
+<h2 id="orgfd886ee"><span class="section-number-2">5</span> Random Encounter</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org4e9ad7e" class="outline-3">
+<h3 id="org4e9ad7e"><span class="section-number-3">5.1</span> Some Encounter Ideas</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Floating, trailing light with gravitational anomaly.</li>
+<li>Imaginary Fire Trap</li>
+<li>Grim Fandango Lounge</li>
+<li>Yodeling German</li>
+<li>Faction (Dünya içi - Dünya Dışı)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2020-10-03 Cmt 17:24</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
